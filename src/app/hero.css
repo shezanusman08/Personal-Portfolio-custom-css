@@ -1,0 +1,150 @@
+/* Basic Styles for the Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10%; /* Adjusted for rem units */
+    background-color: #fff;
+    flex-direction: row; /* Default for desktop */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-text h4 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    color: #333;
+}
+
+.hero-text h1 {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    color: #FF6A00;
+}
+
+.hero-text h2 {
+    font-size: 3rem; /* 48px */
+    font-weight: 900;
+    color: #000;
+}
+
+.hero-text p {
+    font-size: 1rem; /* 16px */
+    color: #777;
+    margin: 1.25rem 0; /* 20px */
+    max-width: 400px;
+}
+
+.hire-btn {
+    background-color: #FF6A00;
+    color: white;
+    padding: 0.75rem 1.5rem; /* 12px 24px */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* 16px */
+    cursor: pointer;
+}
+
+/* Styling for the Image */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make the Next.js Image component circular */
+.rounded-image {
+    border-radius: 50%;
+    border: 5px solid #FF6A00;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column; /* Switch to column for tablet and smaller screens */
+        text-align: center;
+        padding: 3rem 5%; /* Adjusted for rem units */
+    }
+
+    .hero-text {
+        order: 1; /* Make sure text is first */
+        margin-bottom: 2rem; /* Space between text and image */
+    }
+
+    .hero-image {
+        order: 2; /* Image comes after text */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem; /* 40px */
+    }
+
+    .hero-text p {
+        max-width: 600px;
+    }
+
+    .rounded-image {
+        width: 15.625rem; /* 250px */
+        height: 15.625rem; /* 250px */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 3%; /* Adjusted for rem units */
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem; /* 28px */
+    }
+
+    .hero-text h2 {
+        font-size: 2.25rem; /* 36px */
+    }
+
+    .hero-text p {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .rounded-image {
+        width: 12.5rem; /* 200px */
+        height: 12.5rem; /* 200px */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.25rem; /* 20px */
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .hero-text h2 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .hero-text p {
+        font-size: 0.75rem; /* 12px */
+    }
+
+    .rounded-image {
+        width: 9.375rem; /* 150px */
+        height: 9.375rem; /* 150px */
+    }
+
+    .hire-btn {
+        padding: 0.5rem 1rem; /* 8px 16px */
+        font-size: 0.75rem; /* 12px */
+    }
+}
